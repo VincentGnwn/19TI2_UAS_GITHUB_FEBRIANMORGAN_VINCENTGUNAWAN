@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7F48F792-908A-405A-B331-E5A67A807F92}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>JasaEkspedisi</RootNamespace>
+    <AssemblyName>JasaEkspedisi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\Barang.cs" />
+    <Compile Include="Model\Invoice.cs" />
+    <Compile Include="Model\Kurir.cs" />
+    <Compile Include="Model\Login.cs" />
+    <Compile Include="Model\Penerima.cs" />
+    <Compile Include="UI\FormBarang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormBarang.Designer.cs">
+      <DependentUpon>FormBarang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormCreate.Designer.cs">
+      <DependentUpon>FormCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormInvoice.Designer.cs">
+      <DependentUpon>FormInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormKurir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormKurir.Designer.cs">
+      <DependentUpon>FormKurir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormMenu.Designer.cs">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\FormPenerima.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormPenerima.Designer.cs">
+      <DependentUpon>FormPenerima.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UI\FormBarang.resx">
+      <DependentUpon>FormBarang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormCreate.resx">
+      <DependentUpon>FormCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormInvoice.resx">
+      <DependentUpon>FormInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormKurir.resx">
+      <DependentUpon>FormKurir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormMenu.resx">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UI\FormPenerima.resx">
+      <DependentUpon>FormPenerima.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DB\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back-left-arrow-circular-button-outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back-left-arrow-circular-button-outline %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back-left-arrow-circular-button-outline %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\keys.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loupe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\keys1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\square-dice1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
